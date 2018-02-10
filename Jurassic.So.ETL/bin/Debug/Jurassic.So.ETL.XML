@@ -1,0 +1,1503 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Jurassic.So.ETL</name>
+    </assembly>
+    <members>
+        <member name="T:Jurassic.So.ETL.ConfigExceptionCodes">
+            <summary>配置异常代码</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ConfigExceptionCodes.ConnectionNotFound">
+            <summary>连接未发现</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ConfigExceptionCodes.TaskNotFound">
+            <summary>连接未发现</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ConfigExceptionCodes.InvalidColumnInfo">
+            <summary>无效的列信息</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ConfigExceptionCodes.InvalidColumnType">
+            <summary>无效的列类型</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ConfigExceptionCodes.InvalidDateTimeValue">
+            <summary>无效的日期时间值</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ConfigExceptionCodes.InvalidQueryStringInputValue">
+            <summary>无效的查询串输入值</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ConfigExceptionCodes.InvalidBase64InputValue">
+            <summary>无效的Base64输入值</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ConfigExceptionCodes.NullNotAllowed">
+            <summary>不允许null值</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLXmlConfiguration">
+            <summary>XML配置上下文</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.GetAttributeValue(System.Xml.Linq.XElement,System.String,System.String)">
+            <summary>获得特性值</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.GetAttributeValue_Enum``1(System.Xml.Linq.XElement,System.String,``0)">
+            <summary>获得特性值相关枚举值</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.SetAttributeValue(System.Xml.Linq.XElement,System.String,System.String)">
+            <summary>设置特性值</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.GetElement(System.Xml.Linq.XElement,System.String)">
+            <summary>获得元素</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.GetElementValue(System.Xml.Linq.XElement,System.String,System.String)">
+            <summary>获得元素值</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.GetElementValue_Enum``1(System.Xml.Linq.XElement,System.String,``0)">
+            <summary>获得元素值相关枚举值</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.GetElementValue_Int32(System.Xml.Linq.XElement,System.String,System.Int32)">
+            <summary>获得元素值相关整数值</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.SetElementValue(System.Xml.Linq.XElement,System.String,System.String)">
+            <summary>设置元素值</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.SetElementValue_CDDATA(System.Xml.Linq.XElement,System.String,System.String)">
+            <summary>设置元素CDDATA值</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.AddElement(System.Xml.Linq.XElement,System.String)">
+            <summary>加入元素</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.LoadElements``1(System.Xml.Linq.XElement,System.String,System.String,System.Func{System.Xml.Linq.XElement,``0})">
+            <summary>加载元素集合</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.BuildElements``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String,System.Action{System.Xml.Linq.XElement,``0})">
+            <summary>生成元素集合</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLXmlConfiguration.XAttribute_Name">
+            <summary>元素特性_名称</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.GetAttributeValue_Name(System.Xml.Linq.XElement)">
+            <summary>获取元素特性_名称</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.SetAttributeValue_Name(System.Xml.Linq.XElement,System.String)">
+            <summary>设置元素特性_名称</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLXmlConfiguration.Components">
+            <summary>组件映射字典</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLXmlConfiguration.OnComponentLoaded">
+            <summary>组件载入委托</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.LoadRuntimeComponents">
+            <summary>加载运行时组件</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.LoadRuntimeComponentsFromAssembly(System.Reflection.Assembly)">
+            <summary>从程序集加载运行时组件</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.GetComponentAttribute``1">
+            <summary>根据类型获得组件特性</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.GetComponentAttribute(System.Type)">
+            <summary>根据类型获得组件特性</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.GetComponentType``1">
+            <summary>根据类型获得组件类型</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.GetComponentType(System.Type)">
+            <summary>根据类型获得组件类型</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.BuildComponentKey(Jurassic.So.ETL.ETLComponentType,System.String)">
+            <summary>生成组件Key</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.LoadComponent``1(System.Xml.Linq.XElement)">
+            <summary>加载组件</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.GetComponent``1(System.String)">
+            <summary>获得组件实例</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.GetComponentName(System.Xml.Linq.XElement)">
+            <summary>获得组件名称</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.LoadComponents``1(System.Xml.Linq.XElement,System.String)">
+            <summary>加载组件集合</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.BuildComponents(System.String,System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>生成组件集合</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.BuildComponent(System.Xml.Linq.XElement,System.Object)">
+            <summary>生成组件</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.BuildComponent(System.Object)">
+            <summary>生成组件</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLXmlConfiguration.Connections">
+            <summary>连接字典</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.LoadConnections(System.Xml.Linq.XElement,System.String)">
+            <summary>加载连接字典</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.BuildConnections(System.Collections.Generic.Dictionary{System.String,Jurassic.So.ETL.ETLConnection},System.String)">
+            <summary>生成连接字典</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.ValidateConnection(System.String)">
+            <summary>验证连接</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLXmlConfiguration.XElementName_Variable">
+            <summary>变量合</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.LoadVariables(System.Xml.Linq.XElement,System.String)">
+            <summary>加载变量字典</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.LoadVariable(System.Xml.Linq.XElement)">
+            <summary>加载变量</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.BuildVariables(System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
+            <summary>生成变量字典</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.BuildVariable(System.Xml.Linq.XElement,System.Collections.Generic.KeyValuePair{System.String,System.Object})">
+            <summary>生成变量</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLXmlConfiguration.CommonTasks">
+            <summary>公共任务</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.LoadTasks(System.Xml.Linq.XElement,System.String)">
+            <summary>加载任务集合</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.OnCommonTaskLoaded(Jurassic.So.ETL.ETLTask)">
+            <summary>处理公共任务加载</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.BuildTasks(System.Collections.Generic.IEnumerable{Jurassic.So.ETL.ETLTask},System.String)">
+            <summary>生成任务集合</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.ValidateTask(System.String)">
+            <summary>验证任务</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLXmlConfiguration.XElementName_Columns">
+            <summary>元素名称_列集合</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLXmlConfiguration.XElementName_Column">
+            <summary>元素名称_列</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.LoadColumns(System.Xml.Linq.XElement)">
+            <summary>加载列集合</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.LoadColumn(System.Xml.Linq.XElement)">
+            <summary>加载列</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.BuildColumns(System.Collections.Generic.IDictionary{System.String,Jurassic.So.ETL.IETLColumn})">
+            <summary>生成列集合</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.BuildColumn(System.Xml.Linq.XElement,Jurassic.So.ETL.IETLColumn)">
+            <summary>生成列</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLXmlConfiguration.XElementName_Parameters">
+            <summary>元素名称_参数集合</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLXmlConfiguration.XElementName_Parameter">
+            <summary>元素名称_参数</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.LoadParameters(System.Xml.Linq.XElement)">
+            <summary>加载参数集合</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.LoadParameter(System.Xml.Linq.XElement)">
+            <summary>加载参数</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.BuildParameters(System.Collections.Generic.List{Jurassic.So.ETL.ETLParameterInfo})">
+            <summary>生成参数集合</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.BuildParameter(System.Xml.Linq.XElement,Jurassic.So.ETL.ETLParameterInfo)">
+            <summary>生成参数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLXmlConfiguration.XElementName_Converters">
+            <summary>转换器_集合_元素名称</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.LoadConverters(System.Xml.Linq.XElement)">
+            <summary>加载转换器集合</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLXmlConfiguration.BuildConverters(System.Collections.Generic.List{Jurassic.So.ETL.IETLConverter})">
+            <summary>生成转换器集合</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLFtpConnection">
+            <summary>FTP连接</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLFtpConnection.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLFtpConnection.DisposeInternal(System.Boolean)">
+            <summary>释放资源内部方法</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLFtpConnection.LoadXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>加载</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLFtpConnection.BuildXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>生成</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLStringSplitConverter">
+            <summary>字符串分割转换器</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLStringSplitConverter.Separators">
+            <summary>分隔符</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLStringSplitConverter.Execute(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLRow,System.Object)">
+            <summary>执行转换</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLStringSplitConverter.LoadXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>加载</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLNullHandlingPolicy">
+            <summary>null值处理策略</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLNullHandlingPolicy.Ignore">
+            <summary>忽略</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLNullHandlingPolicy.Required">
+            <summary>需要</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLNullHandlingPolicy.Set">
+            <summary>设置</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLFileExtensionColumnConverter">
+            <summary>文件扩展名列转换器</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLFileExtensionColumnConverter.Execute(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLRow,System.Object)">
+            <summary>执行转换</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLNowColumnConverter">
+            <summary>当前时间列转换器</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLNowColumnConverter.Execute(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLRow,System.Object)">
+            <summary>执行转换</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLMD5Converter">
+            <summary>转换器_转换为MD5</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLMD5Converter.Execute(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLRow,System.Object)">
+            <summary>执行转换</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLConstColumnConverter">
+            <summary>常数列转换器</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLConstColumnConverter.Execute(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLRow,System.Object)">
+            <summary>执行转换</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLConverter">
+            <summary>转换器</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLConverter.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLConverter.Input">
+            <summary>输入</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLConverter.InputColumns">
+            <summary>输入列集合</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLConverter.DefaultInputColumn">
+            <summary>默认输入列</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLConverter.NullPolicy">
+            <summary>null值处理策略</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLConverter.Output">
+            <summary>输出</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLConverter.OutputColumns">
+            <summary>输出列集合</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLConverter.DefaultOutputColumn">
+            <summary>默认输出列</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLConverter.Pattern">
+            <summary>处理模式</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLConverter.ToString">
+            <summary>生成JSON串</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLConverter.Prepare(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>准备执行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLConverter.Execute(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLRow,System.Object)">
+            <summary>执行转换</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLConverter.Finish(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>完成执行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLConverter.ValidatePolicy(System.Object)">
+            <summary>验证策略</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLConverter.LoadXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>加载</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLConverter.BuildXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>生成</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLStringsConcatConverter">
+            <summary>字符串连接转换器</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLStringsConcatConverter.Execute(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLRow,System.Object)">
+            <summary>执行转换</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.IETLXmlConfig">
+            <summary>XML配置接口</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.IETLXmlConfig.LoadXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>加载</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.IETLXmlConfig.BuildXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>生成</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLBase64EncoderConverter">
+            <summary>转换器_转换为Base64编码</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLBase64EncoderConverter.Execute(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLRow,System.Object)">
+            <summary>执行转换</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLBase64DecoderConverter">
+            <summary>转换器_从Base64编码转换</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLBase64DecoderConverter.Execute(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLRow,System.Object)">
+            <summary>执行转换</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLQueryStringEncoderConverter">
+            <summary>转换器_转换为查询串</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLQueryStringEncoderConverter.GetKey(System.Int32)">
+            <summary>获得键</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLQueryStringEncoderConverter.Execute(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLRow,System.Object)">
+            <summary>执行转换</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLQueryStringDecoderConverter">
+            <summary>转换器_从查询串转换</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLQueryStringDecoderConverter.Execute(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLRow,System.Object)">
+            <summary>执行转换</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLExtension">
+            <summary>扩展方法</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExtension.#cctor">
+            <summary>静态构造函数</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExtension.ETLToRuntimeType(Jurassic.So.ETL.ETLColumnType)">
+            <summary>转换为运行时类型</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExtension.ETLToColumnType(System.Type)">
+            <summary>转换为列类型</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExtension.ETLToDbType(System.Type)">
+            <summary>转换为数据库类型</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLExtension.ColumnSymbols">
+            <summary>
+            列信息类型符号数组,与列信息类型对应
+            @[名称]表示输入列
+            #[名称]表示输出列
+            $[名称]表示变量
+            </summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLExtension.ColumnSymbolPattern">
+            <summary>正则模式</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExtension.ETLToColumnInfos(System.String)">
+            <summary>转换为列信息</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExtension.ETLToColumnInfo(System.String)">
+            <summary>转换为列信息</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExtension.GetColumnInfoType(System.String)">
+            <summary>根据符号获得列信息类型</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExtension.ETLToInputColumnInfo(Jurassic.So.ETL.IETLColumn)">
+            <summary>转换为列信息</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLExtension.TypeConverterMappers">
+            <summary>类型转换器映射</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExtension.AddTypeConverterMapper(System.Type,System.Type,System.Func{System.Object,System.Object})">
+            <summary>加入类型转换器映射</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExtension.GetTypeConverterMapper(System.Type,System.Type)">
+            <summary>获得类型转换器映射</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExtension.InitTypeConverterMappers">
+            <summary>初始化类型转换器映射</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExtension.ETLToEnum``1(System.Object,``0)">
+            <summary>转换为枚举</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExtension.ETLConvertValue(System.Object,System.Type)">
+            <summary>转换到输出类型</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLExtension.ISODateTimeFormat">
+            <summary>ISO日期时间格式</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExtension.ETLToLocalTime(System.String)">
+            <summary>
+            将ISO时间字符串转为本地时间<c>DateTime</c>
+            </summary>
+            <param name="isoDateTimeString">ISO时间格式的字符串，如：2012-11-02T07:58:51.718Z</param>
+            <returns><c>代表本地时间的<c>DateTime</c></c></returns>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExtension.ETLToISOTimeString(System.DateTime)">
+            <summary>
+            将本地时间转为ISODate格式的字符串
+            </summary>
+            <param name="localTime">代表本地时间的<c>DateTime</c></param>
+            <returns>ISODate格式的字符串，格式如：2012-11-02T07:58:51.718Z</returns>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExtension.ETLToEntityColumns(System.Type,System.String[])">
+            <summary>解析实体公共属性为实体列集合</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExtension.LogInfo(System.String)">
+            <summary>记录信息</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLDbCommandOperation">
+            <summary>数据库命令操作</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLDbCommandOperation.FillTable">
+            <summary>填充数据表</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLDbCommandOperation.FillDataSet">
+            <summary>填充数据集</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLDbCommandOperation.FillSchema">
+            <summary>填充表结构</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLDbCommandOperation.ExecuteNonQuery">
+            <summary>无结果查询</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLDbCommandOperation.ExecuteScalar">
+            <summary>单值查询</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLDbDataSet">
+            <summary>数据库数据集</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbDataSet.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbDataSet.#ctor(System.Data.DataSet)">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLDbDataSet.InnerDataSet">
+            <summary>数据集</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLDbProvider">
+            <summary>数据库提供者</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLDbProvider.Odbc">
+            <summary>Odbc</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLDbProvider.OleDb">
+            <summary>OleDb</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLDbProvider.SqlClient">
+            <summary>SQLServer</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLDbProvider.MSOracleClient">
+            <summary>MS提供的Oracle客户端</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLDbProvider.OracleClient">
+            <summary>Oracle客户端</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLDbProvider.OracleUnmanagedClient">
+            <summary>Oracle原生客户端</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLEntityColumn">
+            <summary>实体列</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLEntityColumn.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLEntityColumn.Accessor">
+            <summary>属性访问器</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLParameterInfo">
+            <summary>参数信息</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLParameterInfo.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLParameterInfo.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLParameterInfo.Type">
+            <summary>类型</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLParameterInfo.Source">
+            <summary>来源</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLParameterInfo.SourceColumn">
+            <summary>来源列</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLParameterInfo.Text">
+            <summary>文本值</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLParameterInfo.Value">
+            <summary>参数值</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLParameterInfo.GetValue(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLColumn,System.Object)">
+            <summary>获得值</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLParameterInfo.ToString">
+            <summary>生成JSON串</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLColumnType">
+            <summary>列类型</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLColumnType.String">
+            <summary>字符串</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLColumnType.Guid">
+            <summary>全局唯一标识符</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLColumnType.Boolean">
+            <summary>布尔值</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLColumnType.DateTime">
+            <summary>日期和时间值</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLColumnType.DateTimeOffset">
+            <summary>显示时区的日期和时间值</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLColumnType.SByte">
+            <summary>有符号 8 位整数</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLColumnType.Byte">
+            <summary>8 位无符号整数</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLColumnType.Binary">
+            <summary>二进制数据</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLColumnType.Int16">
+            <summary>有符号 16 位整数</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLColumnType.Int32">
+            <summary>有符号 32 位整数</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLColumnType.Int64">
+            <summary>有符号 64 位整数</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLColumnType.UInt16">
+            <summary>无符号 16 位整数</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLColumnType.UInt32">
+            <summary>无符号 32 位整数</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLColumnType.UInt64">
+            <summary>无符号 64 位整数</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLColumnType.Single">
+            <summary>浮点数</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLColumnType.Double">
+            <summary>浮点数</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLColumnType.Decimal">
+            <summary>实数</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLColumnType.Object">
+            <summary>表示任何没有由其他值显式表示的引用或值类型</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLColumnInfoType">
+            <summary>列信息类型</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLColumnInfoType.Input">
+            <summary>输入</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLColumnInfoType.Output">
+            <summary>输出</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLColumnInfoType.Variable">
+            <summary>变量</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLColumnInfo">
+            <summary>列信息</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLColumnInfo.Type">
+            <summary>类型</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLColumnInfo.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLColumnInfo.GetValue(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLRow,System.Object)">
+            <summary>获得值</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLColumnInfo.GetType(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLRow,System.Object)">
+            <summary>获得值类型</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLColumnInfo.SetValue(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,System.Object,System.Object)">
+            <summary>设置值</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLColumnInfo.ToString">
+            <summary>生成JSON串</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLTextColumn">
+            <summary>ETL文本列</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLTextColumn.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLTextColumn.Value">
+            <summary>列值</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLColumnArrayKey">
+            <summary>列值数组键</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLColumnArrayKey.#ctor(System.Object[])">
+            <summary>构造函数</summary>
+            <param name="columnValues">列值集合</param>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLColumnArrayKey.ColumnValues">
+            <summary>列值数组</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLColumnArrayKey.Equals(System.Object)">
+            <summary>比较两个列值数组键是否相等</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLColumnArrayKey.Equals(Jurassic.So.ETL.ETLColumnArrayKey)">
+            <summary>比较两个列值数组键是否相等</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLColumnArrayKey.GetHashCode">
+            <summary>获得列值数组的散列码</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLDictionaryRowCollection">
+            <summary>字典行行集</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDictionaryRowCollection.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDictionaryRowCollection.#ctor(System.Int32)">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLDictionaryRowCollection.InnerRows">
+            <summary>行集合</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLDictionaryRowCollection.Rows">
+            <summary>行集合</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDictionaryRowCollection.NewRow">
+            <summary>生成新行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDictionaryRowCollection.AddRow(Jurassic.So.ETL.ETLDictionaryRow)">
+            <summary>加入行</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLRowCollection`1">
+            <summary>行集</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLRowCollection`1.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLRowCollection`1.Columns">
+            <summary>列字典</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLRowCollection`1.Rows">
+            <summary>行集合</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLRowCollection`1.Jurassic#So#ETL#IETLRowCollection#NewRow">
+            <summary>生成新行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLRowCollection`1.NewRow">
+            <summary>生成新行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLRowCollection`1.Jurassic#So#ETL#IETLRowCollection#AddRow(Jurassic.So.ETL.IETLRow)">
+            <summary>加入行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLRowCollection`1.AddRow(`0)">
+            <summary>加入行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLRowCollection`1.AddNewRow">
+            <summary>加入新行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLRowCollection`1.AddRows(System.Collections.Generic.IEnumerable{Jurassic.So.ETL.IETLRow})">
+            <summary>加入行集合</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.IETLParameter">
+            <summary>参数接口，已经放弃使用</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.IETLParameter.Value">
+            <summary>参数值</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.IETLForExpression">
+            <summary>For控制表达式接口</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.IETLForExpression.Value">
+            <summary>循环值</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.IETLForExpression.Init(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>初始化</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.IETLForExpression.Next(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>进入下一步循环</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLDataOutputType">
+            <summary>数据任务输出类型</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLDataOutputType.New">
+            <summary>新数据，默认值</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLDataOutputType.Append">
+            <summary>添加</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLDataOutputType.Ignore">
+            <summary>忽略</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLDataTask">
+            <summary>数据任务，处理数据任务的基类</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDataTask.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLDataTask.OutputType">
+            <summary>输出类型</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDataTask.Execute(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLColumn,System.Object)">
+            <summary>执行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDataTask.ExecuteInternal(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLColumn,System.Object)">
+            <summary>内部执行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDataTask.PushOutput(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRowCollection)">
+            <summary>推入输出</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDataTask.LoadXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>加载</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDataTask.BuildXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>生成</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLJoinTask">
+            <summary>连接任务</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLJoinTask.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLJoinTask.LeftInputRows">
+            <summary>左输入行集合</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLJoinTask.LeftColumns">
+            <summary>左输入列数组</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLJoinTask.RightInputRows">
+            <summary>右输入行集合</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLJoinTask.RightColumns">
+            <summary>右输入列数组</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLJoinTask.Operator">
+            <summary>连接运算符</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLJoinTask.ExecuteInternal(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLColumn,System.Object)">
+            <summary>内部执行</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLAggregateTask">
+            <summary>聚合任务</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLAggregateTask.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLAggregateTask.GroupByColumns">
+            <summary>分组列数组</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLAggregateTask.Operator">
+            <summary>聚合运算符</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLAggregateTask.ExecuteInternal(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLColumn,System.Object)">
+            <summary>内部执行</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLForEachContainerTask">
+            <summary>ForEach容器任务</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLForEachContainerTask.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLForEachContainerTask.Iterator">
+            <summary>迭代器，默认使用上一个任务的输出行集</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLForEachContainerTask.Execute(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLColumn,System.Object)">
+            <summary>执行</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLForControlTask">
+            <summary>For控制任务</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLForControlTask.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLForControlTask.Expression">
+            <summary>For表达式</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLForControlTask.Execute(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLColumn,System.Object)">
+            <summary>执行</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLExecuteContext">
+            <summary>执行上下文</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExecuteContext.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLExecuteContext.RowsStack">
+            <summary>行集堆栈</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLExecuteContext.InputRows">
+            <summary>当前输入行集</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLExecuteContext.OutputRows">
+            <summary>当前输出行集</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExecuteContext.Push(Jurassic.So.ETL.ETLDataOutputType,Jurassic.So.ETL.IETLRowCollection)">
+            <summary>推入输出行集</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLExecuteContext.Connections">
+            <summary>连接集合</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLExecuteContext.Tasks">
+            <summary>任务集合</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLExecuteContext.Variables">
+            <summary>变量集合</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLExecuteContext.LogWatch">
+            <summary>日志计时器</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLExecuteContext.LogKey">
+            <summary>日志键</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExecuteContext.StartWatch">
+            <summary>启动</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExecuteContext.Watch(System.String)">
+            <summary>记时</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExecuteContext.StopWatch">
+            <summary>停止</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLRow">
+            <summary>行，所有行对象的基类</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLRow.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLRow.Columns">
+            <summary>列字典</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLRow.Item(System.String)">
+            <summary>根据列名获得或设置列值</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLRow.Item(Jurassic.So.ETL.IETLColumn)">
+            <summary>根据列获得或设置列值</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLRow.KeyColumns">
+            <summary>键列集合</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLRow.KeyColumnsValue">
+            <summary>键列值集合</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLRow.GetKeyColumnsValue(Jurassic.So.ETL.IETLColumn[])">
+            <summary>获得键列值集合</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLRow.System#ICloneable#Clone">
+            <summary>克隆</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLRow.Clone">
+            <summary>克隆</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLRow.CloneMembers(Jurassic.So.ETL.ETLRow)">
+            <summary>克隆成员方法</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLRow.Equals(System.Object)">
+            <summary>是否相等</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLRow.Equals(Jurassic.So.ETL.IETLRow)">
+            <summary>是否相等</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLRow.Equals(Jurassic.So.ETL.ETLRow)">
+            <summary>是否相等</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLRow.ValuesEquals(Jurassic.So.ETL.ETLRow)">
+            <summary>值集合是否相等</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLRow.GetHashCode">
+            <summary>获得散列值</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLCounterExpression">
+            <summary>For计数控制表达式</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLCounterExpression.InitValue">
+            <summary>初值，默认为0</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLCounterExpression.MaxValue">
+            <summary>最大值</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLCounterExpression.Count">
+            <summary>计数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLCounterExpression.Increment">
+            <summary>增量值，默认为1</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLCounterExpression.GetInitValue(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>获得初值</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLCounterExpression.Match(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>是否满足循环条件</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLCounterExpression.GetNextValue(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>获得下一个值</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLExpression">
+            <summary>控制表达式</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLExpression.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExpression.Match(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>是否满足条件</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.IETLExpression">
+            <summary>控制表达式接口</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.IETLExpression.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.IETLExpression.Match(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>是否满足循环条件</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLForExpression`1">
+            <summary>For控制表达式</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLForExpression`1.CurrentValue">
+            <summary>当前值</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLForExpression`1.Value">
+            <summary>循环值</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLForExpression`1.Init(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>初始化</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLForExpression`1.GetInitValue(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>获得初值</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLForExpression`1.Next(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>进入下一步循环</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLForExpression`1.GetNextValue(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>获得下一个值</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLControlTask">
+            <summary>控制任务</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLControlTask.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLControlTask.Expression">
+            <summary>表达式</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLControlTask.Execute(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLColumn,System.Object)">
+            <summary>执行</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLConnection">
+            <summary>ETL连接，所有ETL连接对象的基类</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLConnection.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLConnection.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLConnection.Test">
+            <summary>测试连接</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLConnection.Open">
+            <summary>打开连接</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLConnection.Close(System.Object)">
+            <summary>关闭</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLConnection.ToString">
+            <summary>生成JSON串</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLConnection.LoadXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>加载</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLConnection.BuildXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>生成</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLMapperColumnConverter">
+            <summary>映射列转换器</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLMapperColumnConverter.Execute(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLRow,System.Object)">
+            <summary>执行转换</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLDefaultColumnConverter">
+            <summary>默认列转换器</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDefaultColumnConverter.Execute(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLRow,System.Object)">
+            <summary>执行转换</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.IETLConverter">
+            <summary>ETL转换器接口</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.IETLConverter.Prepare(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>准备执行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.IETLConverter.Execute(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLRow,System.Object)">
+            <summary>执行转换</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.IETLConverter.Finish(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>完成执行</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLComponentType">
+            <summary>组件类型</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLComponentType.Connection">
+            <summary>连接</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLComponentType.Task">
+            <summary>任务</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLComponentType.Converter">
+            <summary>转换器</summary>
+        </member>
+        <member name="F:Jurassic.So.ETL.ETLComponentType.Custom">
+            <summary>自定义</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLComponentAttribute">
+            <summary>组件特性</summary>
+            <remarks>所有组件必须标注本特性，并且具有无参公共构造函数，并且支持接口<see cref="T:Jurassic.So.ETL.IETLXmlConfig"/></remarks>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLComponentAttribute.#ctor(System.String)">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLComponentAttribute.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLComponentAttribute.Title">
+            <summary>标题</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLComponentAttribute.Description">
+            <summary>描述</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLComponentAttribute.ToString">
+            <summary>生成JSON串</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLDbConnection">
+            <summary>数据库连接</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbConnection.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLDbConnection.ProviderName">
+            <summary>提供者</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLDbConnection.ConnectionString">
+            <summary>连接串</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLDbConnection.Provider">
+            <summary>数据库提供者</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbConnection.Open">
+            <summary>打开连接</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbConnection.Close(System.Object)">
+            <summary>关闭</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbConnection.DisposeInternal(System.Boolean)">
+            <summary>释放资源内部方法</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbConnection.NormalizeObjectName(System.String)">
+            <summary>规范化对象名称</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbConnection.NormalizeParameterName(System.String)">
+            <summary>规范化参数名称</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbConnection.BuildRowNumberField(System.String)">
+            <summary>生成行号字段</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbConnection.LoadXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>加载</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbConnection.BuildXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>生成</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLDbDataColumn">
+            <summary>数据库数据列</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbDataColumn.#ctor(System.Data.DataColumn)">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLDbDataColumn.InnerColumn">
+            <summary>内部列</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLDbDataTable">
+            <summary>数据库数据表</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbDataTable.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbDataTable.#ctor(System.Data.DataTable)">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLDbDataTable.InnerTable">
+            <summary>数据表</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLDbDataTable.Rows">
+            <summary>行集合</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbDataTable.NewRow">
+            <summary>生成新行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbDataTable.AddRow(Jurassic.So.ETL.ETLDbDataRow)">
+            <summary>加入行</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLDbSqlTask">
+            <summary>数据库SQL任务</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbSqlTask.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLDbSqlTask.CommandType">
+            <summary>命令类型</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLDbSqlTask.CommandText">
+            <summary>命令文本</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLDbSqlTask.CommandTimeout">
+            <summary>命令超时（以秒为单位）</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLDbSqlTask.CommandOperation">
+            <summary>命令操作</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLDbSqlTask.Parameters">
+            <summary>参数信息集合</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLDbSqlTask.InjectCommand">
+            <summary>注入命令</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLDbSqlTask.ETLDbConnection">
+            <summary>数据库连接</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLDbSqlTask.DbConnection">
+            <summary>数据库连接</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbSqlTask.ExecuteInternal(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLColumn,System.Object)">
+            <summary>内部执行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbSqlTask.PrepareCommand(System.Data.Common.DbCommand,Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLColumn,System.Object)">
+            <summary>准备命令</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbSqlTask.AddParameters(System.Collections.Generic.IEnumerable{Jurassic.So.ETL.ETLParameterInfo},Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLColumn,System.Object)">
+            <summary>加入参数</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbSqlTask.AddParameter(Jurassic.So.ETL.ETLParameterInfo,Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLColumn,System.Object)">
+            <summary>加入参数</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbSqlTask.NormalizeObjectName(System.String)">
+            <summary>规范化对象名称</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbSqlTask.BuildRowNumberField(System.String)">
+            <summary>生成行号字段</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbSqlTask.ExecuteCommand(System.Data.Common.DbCommand,Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLColumn,System.Object)">
+            <summary>执行命令</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbSqlTask.CloneMembers(Jurassic.So.ETL.ETLTask)">
+            <summary>克隆成员方法</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbSqlTask.LoadXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>加载</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbSqlTask.BuildXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>生成</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLDbDataRow">
+            <summary>数据库数据行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbDataRow.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDbDataRow.#ctor(System.Data.DataRow)">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLDbDataRow.InnerRow">
+            <summary>内部行</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLDbDataRow.Item(Jurassic.So.ETL.IETLColumn)">
+            <summary>名称</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.IETLRowCollection">
+            <summary>行集接口</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.IETLRowCollection.Columns">
+            <summary>列字典</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.IETLRowCollection.Rows">
+            <summary>行集合</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.IETLRowCollection.NewRow">
+            <summary>生成新行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.IETLRowCollection.AddRow(Jurassic.So.ETL.IETLRow)">
+            <summary>加入行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.IETLRowCollection.AddRows(System.Collections.Generic.IEnumerable{Jurassic.So.ETL.IETLRow})">
+            <summary>加入行集合</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLColumn">
+            <summary>列</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLColumn.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLColumn.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLColumn.IsKey">
+            <summary>是否键列</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLColumn.Type">
+            <summary>类型</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLColumn.ToString">
+            <summary>生成JSON串</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.IETLColumn">
+            <summary>列接口</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.IETLColumn.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.IETLColumn.Type">
+            <summary>类型</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.IETLColumn.IsKey">
+            <summary>是否键列</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLMergeTask">
+            <summary>数据合并任务</summary>
+            <remarks>根据多个输出行生成输出行集</remarks>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLMergeTask.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLMergeTask.OutputTask">
+            <summary>输出任务</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLMergeTask.ExecuteInternal(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLColumn,System.Object)">
+            <summary>内部执行</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLExtracterTask">
+            <summary>数据提取任务</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExtracterTask.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLExtracterTask.ConnectionName">
+            <summary>连接名称</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLExtracterTask.Connection">
+            <summary>连接</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLExtracterTask.InnerConnection">
+            <summary>连接</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExtracterTask.Prepare(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>准备执行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExtracterTask.Finish(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>完成执行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExtracterTask.LoadXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>加载</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLExtracterTask.BuildXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>生成</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLDefaultTransformerTask">
+            <summary>默认转换任务</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDefaultTransformerTask.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLDefaultTransformerTask.Columns">
+            <summary>列字典</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDefaultTransformerTask.PrepareInput(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLColumn,System.Object)">
+            <summary>准备输入行集合</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDefaultTransformerTask.PrepareOutput(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLColumn,System.Object)">
+            <summary>准备输出行集合</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDefaultTransformerTask.LoadXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>加载</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDefaultTransformerTask.BuildXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>生成</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLWrappedTask">
+            <summary>包装任务</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLWrappedTask.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLWrappedTask.RefName">
+            <summary>引用任务名称</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLWrappedTask.WrappedTask">
+            <summary>任务</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLWrappedTask.Prepare(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>准备执行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLWrappedTask.Execute(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLColumn,System.Object)">
+            <summary>执行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLWrappedTask.Finish(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>完成执行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLWrappedTask.DisposeInternal(System.Boolean)">
+            <summary>释放资源内部方法</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLWrappedTask.LoadXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>加载</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLWrappedTask.BuildXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>生成</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLTransformerTask">
+            <summary>数据转换任务</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLTransformerTask.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLTransformerTask.Converters">
+            <summary>转换器集合</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLTransformerTask.Prepare(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>准备执行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLTransformerTask.PrepareInput(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLColumn,System.Object)">
+            <summary>准备输入行集合</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLTransformerTask.PrepareOutput(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLColumn,System.Object)">
+            <summary>准备输出行集合</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLTransformerTask.ExecuteInternal(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLColumn,System.Object)">
+            <summary>内部执行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLTransformerTask.Finish(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>完成执行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLTransformerTask.LoadXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>加载</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLTransformerTask.BuildXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>生成</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLSequenceContainerTask">
+            <summary>顺序容器任务</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLSequenceContainerTask.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLSequenceContainerTask.Tasks">
+            <summary>数据任务集合</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLSequenceContainerTask.Prepare(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>准备执行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLSequenceContainerTask.Execute(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLColumn,System.Object)">
+            <summary>执行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLSequenceContainerTask.Finish(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>完成执行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLSequenceContainerTask.DisposeInternal(System.Boolean)">
+            <summary>释放资源内部方法</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLSequenceContainerTask.LoadXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>加载</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLSequenceContainerTask.BuildXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>生成</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLPackage">
+            <summary>包，独立的完整的执行过程</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLPackage.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLPackage.TaskContainer">
+            <summary>任务容器</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLPackage.Execute(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>执行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLPackage.DisposeInternal(System.Boolean)">
+            <summary>释放资源内部方法</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLDictionaryRow">
+            <summary>ETL字典行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDictionaryRow.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLDictionaryRow.#ctor(System.StringComparer)">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLDictionaryRow.InnerRow">
+            <summary>内部行</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLDictionaryRow.Item(System.String)">
+            <summary>获得或设置列值</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLDictionaryRow.Item(Jurassic.So.ETL.IETLColumn)">
+            <summary>根据列获得或设置列值</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.ETLTask">
+            <summary>任务，所有任务的基类</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLTask.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.ETLTask.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLTask.Prepare(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>准备执行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLTask.Execute(Jurassic.So.ETL.ETLExecuteContext,Jurassic.So.ETL.IETLRow,Jurassic.So.ETL.IETLColumn,System.Object)">
+            <summary>执行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLTask.Finish(Jurassic.So.ETL.ETLExecuteContext)">
+            <summary>完成执行</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLTask.DisposeInternal(System.Boolean)">
+            <summary>释放资源内部方法</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLTask.ToString">
+            <summary>生成JSON串</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLTask.LoadXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>加载</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLTask.BuildXml(Jurassic.So.ETL.ETLXmlConfiguration,System.Xml.Linq.XElement)">
+            <summary>生成</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLTask.System#ICloneable#Clone">
+            <summary>克隆</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLTask.Clone">
+            <summary>克隆</summary>
+        </member>
+        <member name="M:Jurassic.So.ETL.ETLTask.CloneMembers(Jurassic.So.ETL.ETLTask)">
+            <summary>克隆成员方法</summary>
+        </member>
+        <member name="T:Jurassic.So.ETL.IETLRow">
+            <summary>ETL行接口</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.IETLRow.Columns">
+            <summary>列字典</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.IETLRow.Item(System.String)">
+            <summary>根据列名获得或设置列值</summary>
+        </member>
+        <member name="P:Jurassic.So.ETL.IETLRow.Item(Jurassic.So.ETL.IETLColumn)">
+            <summary>根据列获得或设置列值</summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Jurassic.So.ETL.ETLPackage" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <AssociationLine Name="Tasks" Type="Jurassic.So.ETL.ETLSequenceContainerTask" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="0.844" Y="1.177" />
+        <Point X="0.844" Y="1.552" />
+        <Point X="5.375" Y="1.552" />
+        <Point X="5.375" Y="4.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAEAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Core\ETLPackage.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Tasks" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Jurassic.So.ETL.ETLExecuteContext" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.75" />
+    <AssociationLine Name="Connections" Type="Jurassic.So.ETL.ETLConnection" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.406" Y="1.177" />
+        <Point X="7.406" Y="1.661" />
+        <Point X="8.401" Y="1.661" />
+        <Point X="8.401" Y="2" />
+        <Point X="8.438" Y="2" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEIAAAAAABAgAAEAAAAAAAAAQAACAAAAA=</HashCode>
+      <FileName>Core\ETLExecuteContext.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OutputRows" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Connections" />
+      <Property Name="Variables" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Jurassic.So.ETL.ETLSequenceContainerTask" Collapsed="true">
+    <Position X="4.25" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAQAAAAAAAAAEAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Task\Container\ETLSequenceContainerTask.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Tasks" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Jurassic.So.ETL.ETLConnection" Collapsed="true">
+    <Position X="7.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAQAAAAAAAAAAAAACACAAAA=</HashCode>
+      <FileName>Core\ETLConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="5.75" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Jurassic.So.ETL.ETLDataTask" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAQAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Task\Data\ETLDataTask.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jurassic.So.ETL.ETLTask" Collapsed="true">
+    <Position X="1.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAQAAAAkAAQAEAAAAAAAIAAAAAAARAA=</HashCode>
+      <FileName>Task\ETLTask.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jurassic.So.ETL.ETLExtracterTask" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAEAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Task\Data\ETLExtracterTask.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jurassic.So.ETL.ETLTransformerTask" Collapsed="true">
+    <Position X="2.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAIAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Task\Data\ETLTransformerTask.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Converters" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Jurassic.So.ETL.ETLDbConnection" Collapsed="true">
+    <Position X="7.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEIAAAAAAAAAAAEAAAAAAAAKAAAACQAAA=</HashCode>
+      <FileName>Database\ETLDbConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jurassic.So.ETL.ETLWrappedTask" Collapsed="true">
+    <Position X="2.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAQAAAAAAAAAEAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Task\ETLWrappedTask.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jurassic.So.ETL.ETLControlTask" Collapsed="true">
+    <Position X="4" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Task\Control\ETLControlTask.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Expression" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Jurassic.So.ETL.ETLForControlTask" Collapsed="true">
+    <Position X="4" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Task\Control\ETLForControlTask.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jurassic.So.ETL.ETLForEachContainerTask" Collapsed="true">
+    <Position X="5.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Task\Container\ETLForEachContainerTask.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Jurassic.So.ETL.IETLRowCollection" Collapsed="true">
+    <Position X="9.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAEAAAEAgAAAA=</HashCode>
+      <FileName>Data\Row\IETLRowCollection.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Columns" />
+      <Property Name="Rows" />
+    </ShowAsCollectionAssociation>
+  </Interface>
+  <Interface Name="Jurassic.So.ETL.IETLColumn" Collapsed="true">
+    <Position X="11.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAQAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Data\Column\IETLColumn.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Jurassic.So.ETL.IETLRow" Collapsed="true">
+    <Position X="9.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Data\Row\IETLRow.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Jurassic.So.ETL.IETLConverter" Collapsed="true">
+    <Position X="2.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Convert\IETLConverter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Jurassic.So.ETL.IETLExpression" Collapsed="true">
+    <Position X="7" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expression\IETLExpression.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

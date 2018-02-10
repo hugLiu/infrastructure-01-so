@@ -1,0 +1,65 @@
+﻿<Messages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!-- Debug 000-->
+  <MessagesByType typeCode="1" typeName="Debug Messages" annotation="Code range shall be 000">
+    <Message id="000">
+      <Description>{0}</Description>
+      <Variables>
+        <Variable formatIndex="0">Debug message</Variable>
+      </Variables>
+    </Message>
+  </MessagesByType>
+  <!-- Info 001~099-->
+  <MessagesByType typeCode="2" typeName="Info Messages" annotation="Code range shall be 001-099">
+    <Message id="001">
+      <Description>Action completed successfully.</Description>
+      <Variables>
+        <Variable formatIndex="0"></Variable>
+      </Variables>
+    </Message>
+  </MessagesByType>
+  <!-- Warn 100~199-->
+  <MessagesByType typeCode="3" typeName="Warn Messages" annotation="Code range shall be 100-199">
+    <Message id="100">
+      <Description>{0} completed with warning(s): {1}</Description>
+      <Variables>
+        <Variable formatIndex="0">Action name</Variable>
+        <Variable formatIndex="1">Warning message</Variable>
+      </Variables>
+    </Message>
+  </MessagesByType>
+  <!-- Validation Error 200~399-->
+  <MessagesByType typeCode="4" typeName="Validation Error" annotation="Code range shall be 200-399">
+    <Message id="200">
+      <Description>缺少所需的数据：{0} 是必需的但没有提供。</Description>
+      <Variables>
+        <Variable formatIndex="0">Variable name</Variable>
+      </Variables>
+    </Message>
+    <Message id="201">
+      <Description>日期范围无效的输入：{0} 不能大于 {1}，请检查并重新提交。</Description>
+      <Variables>
+        <Variable formatIndex="0">from date</Variable>
+        <Variable formatIndex="1">to date</Variable>
+      </Variables>
+    </Message>
+  </MessagesByType>
+  <!-- Application Error 400~799-->
+  <MessagesByType typeCode="5" typeName="Application Error" annotation="Code range shall be 400-799">
+    <Message id="400">
+      <Description>没有找到所需的数据：{0} {1} 没有发现。</Description>
+      <Variables>
+        <Variable formatIndex="0">Entity name</Variable>
+        <Variable formatIndex="1">Entity value</Variable>
+      </Variables>
+    </Message>
+  </MessagesByType>
+  <!-- System Error 800~999-->
+  <MessagesByType typeCode="6" typeName="System Error" annotation="Code range shall be 800-999">
+    <Message id="999">
+      <Description>System Error 999 - Contact Production Support, Getting undefined Exception. Details: {0}</Description>
+      <Variables>
+        <Variable formatIndex="0">exception or error details</Variable>
+      </Variables>
+    </Message>
+  </MessagesByType>
+</Messages>
